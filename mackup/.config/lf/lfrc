@@ -1,0 +1,8 @@
+set icons true
+
+cmd mkdir %{{
+    IFS=" "
+    mkdir -p -- "$*"
+    lf -remote "send $id select \"$*\""
+}}
+map a push :mkdir<space>
