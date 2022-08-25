@@ -30,14 +30,14 @@ require('telescope').load_extension('harpoon')
 require("telescope").load_extension("git_worktree")
 
 -- Keymaps
-keymap('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<cr>]])
 keymap('n', '<leader><leader>', [[<cmd>lua require('telescope.builtin').resume()<cr>]])
+keymap('n', '<leader>fb', [[<cmd>lua require('telescope.builtin').buffers()<cr>]])
 keymap('n', '<leader>fc', [[<cmd>lua require('telescope.builtin').git_commits()<cr>]])
 keymap('n', '<leader>fd', [[<cmd>lua require('telescope.builtin').diagnostics()<cr>]])
 keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<cr>]])
+keymap('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]])
 keymap('n', '<leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]])
 keymap('n', '<leader>fi', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>]])
 keymap('n', '<leader>fm', [[<cmd>lua require('telescope.builtin').man_pages()<cr>]])
 keymap('n', '<leader>fr', [[<cmd>lua require('telescope.builtin').registers({sorting_strategy="ascending"})<cr>]])
-keymap('n', '<leader>fs', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]])
 
