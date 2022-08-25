@@ -27,7 +27,7 @@ require('lspconfig')['gopls'].setup{
 }
 
 -- Python LSP configuration
-require('lspconfig')['pyright'].setup{
+require('lspconfig').pyright.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,

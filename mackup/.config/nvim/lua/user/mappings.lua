@@ -5,7 +5,6 @@ vim.g.maplocalleader = ' '
 
 -- Exit insert mode
 keymap('i', 'jj', '<esc>')
-keymap('i', 'kk', '<esc>')
 
 -- Edit the current file under the cursor
 keymap('n', '<leader>ef', '<cmd>edit <cfile><cr>')
