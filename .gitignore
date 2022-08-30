@@ -1,8 +1,12 @@
 .netrc
-mackup/.aws/credentials
-mackup/.config/fish/fish_variables
-mackup/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences
-mackup/Library/Application Support/zoxide/db.zo
-mackup/Library/Preferences/com.apple.Music.eq.plist
-mackup/Library/Preferences/com.apple.Music.plist
-mackup/Library/Preferences/com.apple.symbolichotkeys.plist
+composer/cache/
+composer/vendor/
+nvim/plugin/
+tmux/plugins/
+valet/
+zsh/envvars.zsh
+zsh/.zcompcache
+zsh/.zcompdump
+zsh/.zsh_history
+# No time for playing games
+Battle.net/

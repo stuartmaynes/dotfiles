@@ -1,0 +1,13 @@
+set icons true
+
+set previewer ~/.config/lf/previewer.sh
+map i $~/.config/lf/previewer.sh $f | less -RX
+
+cmd open $$EDITOR $fx
+
+cmd mkdir %{{
+    IFS=" "
+    mkdir -p -- "$*"
+    lf -remote "send $id select \"$*\""
+}}
+map a push :mkdir<space>

@@ -1,0 +1,10 @@
+.DS_Store
+.Idea
+.tool-versions
+.vscode
+.env
+.phpunit.result.cache
+.htaccess
+.sass-cache
+node_modules/
+*.swo
