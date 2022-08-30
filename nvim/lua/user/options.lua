@@ -5,6 +5,7 @@ vim.cmd([[filetype off]])
 vim.cmd([[filetype plugin indent on]])
 vim.cmd([[noswapfile]])
 
+
 opt.hidden = true
 opt.encoding = 'UTF-8'
 
@@ -13,6 +14,9 @@ opt.relativenumber = true
 
 -- Highlight the line the cursor is on
 opt.cursorline = true
+-- Colour of the cursor line
+vim.cmd([[hi clear CursorLine]])
+vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
 
 -- Searching
 opt.incsearch = true
@@ -41,9 +45,6 @@ vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 -- Visual highlight
 vim.cmd([[hi Visual guifg=#000000 guibg=#FF8700 gui=none]])
--- Colour of the cursor line
-vim.cmd([[hi clear CursorLine]])
-vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
 
 -- Highlight what was yanked
 vim.cmd([[hi IncSearch guifg=#000000 guibg=#FFFFFF gui=none ctermbg=cyan ctermfg=black cterm=none]])

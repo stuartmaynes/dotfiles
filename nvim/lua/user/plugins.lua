@@ -4,8 +4,20 @@ packer.startup(function(use)
     -- Require packer to install packer
     use({'wbthomason/packer.nvim'})
 
+    use({'gruvbox-community/gruvbox'})
+
 	use({'editorconfig/editorconfig-vim'})
+
 	use({'mattn/emmet-vim'})
+
+    use({'jessarcher/vim-heritage'})
+
+    use({'justinmk/vim-sneak'})
+
+	use({'tpope/vim-repeat'})
+	use({'tpope/vim-sensible'})
+	use({'tpope/vim-surround'})
+	use({'tpope/vim-vinegar'})
 
 	use({
         'numToStr/Comment.nvim',
@@ -13,17 +25,6 @@ packer.startup(function(use)
             require('user.plugins.comment')
         end,
     })
-
-    use({'jessarcher/vim-heritage'})
-
-	use({'tpope/vim-repeat'})
-	use({'tpope/vim-sensible'})
-	use({'tpope/vim-surround'})
-	use({'tpope/vim-vinegar'})
-
-    use({'dracula/vim'})
-    -- use({'ellisonleao/gruvbox.nvim'})
-    use({'gruvbox-community/gruvbox'})
 
     use({
       'nvim-lualine/lualine.nvim',
@@ -121,6 +122,13 @@ packer.startup(function(use)
         config = function()
             require('user.plugins.neogen')
         end,
+    })
+
+    use({
+        'windwp/nvim-autopairs',
+        config = function()
+            require('user.plugins.autopairs')
+        end
     })
 end)
 

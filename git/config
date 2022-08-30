@@ -1,10 +1,10 @@
-# This is Git's per-user configuration file.
 [user]
-name = Stuart Maynes
-email = stuart.maynes@me.com
+    email = stuart.maynes@me.com
+    name = Stuart Maynes
+    username = stuartmaynes
 
 [core]
-	excludesFile = ~/.gitignore
+    excludesFile = ~/.config/git/.gitignore
     pager = delta
 
 [init]
@@ -12,6 +12,7 @@ email = stuart.maynes@me.com
 
 [interactive]
     diffFilter = delta --color-only
+
 [add.interactive]
     useBuiltin = false # required for git 2.37.0
 
