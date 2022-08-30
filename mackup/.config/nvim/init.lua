@@ -1,5 +1,0 @@
-require('user.plugins')
-require('user.mappings')
-require('user.options')
-require('user.misc')
-require('user.snippets')
