@@ -1,5 +1,6 @@
 {
     "require": {
-        "laravel/valet": "^3.1"
+        "laravel/valet": "^3.1",
+        "psy/psysh": "@stable"
     }
 }

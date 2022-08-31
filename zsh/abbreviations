@@ -1,2 +1,4 @@
+abbr gst="git status"
+abbr gwa="git worktree add"
 abbr mpl="music play"
 abbr mps="music pause"
