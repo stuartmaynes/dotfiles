@@ -102,5 +102,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/envvars.zsh
 
 # PATH Variable
-export PATH="$PATH:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin"
+export PATH="$PATH:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin/"
 
