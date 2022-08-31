@@ -5,6 +5,7 @@ packer.startup(function(use)
     use({'wbthomason/packer.nvim'})
 
     use({'gruvbox-community/gruvbox'})
+    use({'folke/tokyonight.nvim'})
 
 	use({'editorconfig/editorconfig-vim'})
 

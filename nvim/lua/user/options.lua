@@ -12,11 +12,6 @@ opt.encoding = 'UTF-8'
 opt.number = true
 opt.relativenumber = true
 
--- Highlight the line the cursor is on
-opt.cursorline = true
--- Colour of the cursor line
-vim.cmd([[hi clear CursorLine]])
-vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
 
 -- Searching
 opt.incsearch = true
@@ -40,11 +35,17 @@ opt.colorcolumn = "80"
 
 -- Colour scheme
 opt.termguicolors = true
-vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme gruvbox]])
 -- Transparent background
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 -- Visual highlight
-vim.cmd([[hi Visual guifg=#000000 guibg=#FF8700 gui=none]])
+vim.cmd([[hi Visual guifg=#000000 guibg=#9978DB gui=none]])
+
+-- Highlight the line the cursor is on
+opt.cursorline = true
+-- Colour of the cursor line
+vim.cmd([[hi clear CursorLine]])
+vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
 
 -- Highlight what was yanked
 vim.cmd([[hi IncSearch guifg=#000000 guibg=#FFFFFF gui=none ctermbg=cyan ctermfg=black cterm=none]])
@@ -68,3 +69,10 @@ opt.equalalways = true
 opt.wildmode = 'longest:full,full'
 opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
+
+-- Tokyonight colorscheme
+vim.g.tokyonight_style = "storm"
+vim.g.tokyonight_dark_sidebar = true
+vim.g.tokyonight_transparent = true
+vim.g.tokyonight_lualine_bold = true
+vim.cmd([[colorscheme tokyonight]])
