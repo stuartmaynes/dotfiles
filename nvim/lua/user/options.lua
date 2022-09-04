@@ -71,8 +71,10 @@ opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
 
 -- Tokyonight colorscheme
-vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_dark_sidebar = true
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_dark_sidebar = false
 vim.g.tokyonight_transparent = true
 vim.g.tokyonight_lualine_bold = true
+vim.g.tokyonight_dark_float = false
+vim.g.tokyonight_colors = { bg_float = "none" }
 vim.cmd([[colorscheme tokyonight]])
