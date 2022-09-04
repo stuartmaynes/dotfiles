@@ -19,28 +19,30 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
+local lspconfig = require('lspconfig')
+
 -- Go LSP configuration
-require('lspconfig')['gopls'].setup{
+lspconfig.gopls.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities
 }
 
 -- Python LSP configuration
-require('lspconfig').pyright.setup{
+lspconfig.pyright.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
 
 -- JavaScript LSP configuration
-require('lspconfig').eslint.setup{
+lspconfig.eslint.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
 
-require('lspconfig').phpactor.setup{
+lspconfig.phpactor.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
