@@ -2,7 +2,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
-local lsp_on_attach = function(client, bufnr)
+local lsp_on_attach = function(_, bufnr)
     local bufopts = { noremap=true, silent=true, buffer=bufnr }
 
     vim.keymap.set('n', '<Leader>k', vim.lsp.buf.hover, bufopts)
@@ -29,10 +29,17 @@ lspconfig.gopls.setup{
 }
 
 -- Python LSP configuration
-lspconfig.pyright.setup{
+lspconfig.pylsp.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
+    settings = {
+        pylsp = {
+            plugins = {
+                black = { enabled = true },
+            },
+        }
+    },
 }
 
 -- JavaScript LSP configuration
@@ -42,12 +49,15 @@ lspconfig.eslint.setup{
     capabilities = capabilities,
 }
 
-lspconfig.phpactor.setup{
+-- PHP LSP configuration
+lspconfig.intelephense.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    init_options = {
-        ["language_server_phpstan.enabled"] = true,
-        ["language_server_psalm.enabled"] = true,
-    }
+}
+
+lspconfig.sumneko_lua.setup{
+    on_attach = lsp_on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
 }
