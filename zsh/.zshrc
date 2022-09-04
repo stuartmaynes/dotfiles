@@ -1,4 +1,4 @@
-HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTFILE=$HOME/.config/zsh/.zsh_history
 
 # Share history across multiple zsh sessions
 setopt SHARE_HISTORY
@@ -21,21 +21,10 @@ setopt HIST_VERIFY
 setopt HIST_IGNORE_SPACE
 # Record command start time
 setopt EXTENDED_HISTORY
-
-# Search history with the up and down arrows
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
-
 # Case insensitive globbing
 setopt NO_CASE_GLOB
-
 # Change directory without cd
 setopt AUTO_CD
-
 # Auto correction of mispelt commands
 setopt CORRECT
 setopt CORRECT_ALL
@@ -102,5 +91,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/envvars.zsh
 
 # PATH Variable
-export PATH="$PATH:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin/"
+export PATH="$PATH:/usr/local/sbin:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin/"
+
+# Search history with the up and down arrows
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
