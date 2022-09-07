@@ -1,4 +1,9 @@
 --vim.g.tokyonight_style = "night"
-vim.cmd[[colorscheme tokyonight]]
+require("tokyonight").setup({
+    dim_inactive = false,
+    style = "night",
+    transparent = true,
+    terminal_colors = true,
+})
 
-
+vim.cmd([[colorscheme tokyonight]])
