@@ -4,8 +4,12 @@ packer.startup(function(use)
     -- Require packer to install packer
     use({'wbthomason/packer.nvim'})
 
-    use({'gruvbox-community/gruvbox'})
-    use({'folke/tokyonight.nvim'})
+    use({
+        'folke/tokyonight.nvim',
+        config = function()
+            require('user.plugins.tokyonight')
+        end,
+    })
 
 	use({'editorconfig/editorconfig-vim'})
 
@@ -27,15 +31,15 @@ packer.startup(function(use)
         end,
     })
 
-    use({
-      'nvim-lualine/lualine.nvim',
-      requires = {
-          {'kyazdani42/nvim-web-devicons'}
-      },
-      config = function()
-          require('user.plugins.lualine')
-      end
-    })
+    -- use({
+    --   'nvim-lualine/lualine.nvim',
+    --   requires = {
+    --       {'kyazdani42/nvim-web-devicons'}
+    --   },
+    --   config = function()
+    --       require('user.plugins.lualine')
+    --   end
+    -- })
 
 	use({
         'nvim-telescope/telescope.nvim',

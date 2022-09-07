@@ -1,13 +1,41 @@
-set icons true
+set hidden true
 
 set previewer ~/.config/lf/previewer.sh
-map i $~/.config/lf/previewer.sh $f | less -RX
 
 cmd open $$EDITOR $fx
 
 cmd mkdir %{{
-    IFS=" "
-    mkdir -p -- "$*"
-    lf -remote "send $id select \"$*\""
+    printf "Directory name: "
+    read ans
+    mkdir -p $ans
 }}
-map a push :mkdir<space>
+
+cmd mkfile %{{
+    printf "File name: "
+    read ans
+    $EDITOR $ans
+}}
+
+cmd toggle_hidden %{{
+    if [$hidden]; then
+        set hidden = false
+    else
+        set hidden = true
+    fi
+}}
+cmd trash %{{
+    mkdir -p ~/.Trash
+    IFS="`printf '\n\t'`";
+    trash $fx
+}}
+
+map d
+map m
+
+map . toggle_hidden
+map dd trash
+map gc cd ~/.config
+map gp cd ~/Projects
+map gs cd ~/Substrakt
+map md mkdir
+map mf mkfile

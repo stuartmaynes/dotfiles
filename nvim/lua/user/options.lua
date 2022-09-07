@@ -33,9 +33,17 @@ opt.listchars = 'tab:> ,trail:-,extends:>,precedes:<,nbsp:+'
 
 opt.colorcolumn = "80"
 
+-- Splits
+opt.splitbelow = true
+opt.equalalways = true
+
+-- Wild
+opt.wildmode = 'longest:full,full'
+opt.wildignore = "__pycache__"
+opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
+
 -- Colour scheme
 opt.termguicolors = true
--- vim.cmd([[colorscheme gruvbox]])
 -- Transparent background
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 -- Visual highlight
@@ -61,20 +69,3 @@ vim.cmd([[
   autocmd BufWritePre * %s/\s\+$//e
 ]])
 
--- Splits
-opt.splitbelow = true
-opt.equalalways = true
-
--- Wild
-opt.wildmode = 'longest:full,full'
-opt.wildignore = "__pycache__"
-opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
-
--- Tokyonight colorscheme
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_dark_sidebar = false
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_lualine_bold = true
-vim.g.tokyonight_dark_float = false
-vim.g.tokyonight_colors = { bg_float = "none" }
-vim.cmd([[colorscheme tokyonight]])
