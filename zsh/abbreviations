@@ -1,3 +1,5 @@
+abbr drs="run ./manage.py runserver"
+abbr gbc="git clone --bare "
 abbr gph="git push heroku"
 abbr gpo="git push origin"
 abbr gst="git status"
