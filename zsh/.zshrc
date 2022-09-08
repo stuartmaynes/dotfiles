@@ -82,16 +82,22 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 # External scripts to source
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/gitignore.zsh
 
 # This is a little buggy
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374,bg=bold"
 # source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Source local scripts and settings
-source ~/.config/zsh/envvars.zsh
+LFCD="$HOME/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
+
+bindkey -s '^o' 'lfcd\n'  # zsh
+alias -g lfcd='lfcd'
 
 # PATH Variable
-export PATH="$PATH:/usr/local/sbin:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin/"
+export PATH="$PATH:/usr/local/sbin:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin:/Users/stuart/.local/bin"
 
 # Search history with the up and down arrows
 autoload -U up-line-or-beginning-search

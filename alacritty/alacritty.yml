@@ -70,7 +70,7 @@ draw_bold_text_with_bright_colors: true
 
 
 key_bindings:
-  - { key: Key3, mods: Alt, chars: "#" }
+  # - { key: Key3, mods: Alt, chars: "#" }
   # Create a new tmux window
   - { key: T, mods: Command, chars: "\x02\x63" }
   # Break the current tmux pane out of the tmux window
@@ -101,3 +101,5 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x02\x78" }
   # List tmux sessions
   - { key: L, mods: Command, chars: "\x02\x77" }
+  # Clear the current line and open LF
+  - { key: O, mods: Command, chars: "\x15\x6c\x66\x63\x64\x0a" }
