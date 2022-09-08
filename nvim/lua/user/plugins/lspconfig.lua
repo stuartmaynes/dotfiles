@@ -13,6 +13,7 @@ local lsp_on_attach = function(_, bufnr)
     vim.keymap.set('n', '<Leader>gi', vim.lsp.buf.implementation, bufopts)
     vim.keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, bufopts)
     vim.keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, bufopts)
+    vim.keymap.set('n', '<Leader>fd', vim.lsp.buf.formatting, bufopts)
 end
 
 local lsp_flags = {
@@ -29,6 +30,7 @@ lspconfig.gopls.setup{
 }
 
 -- Python LSP configuration
+--- https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md
 lspconfig.pylsp.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
@@ -37,8 +39,10 @@ lspconfig.pylsp.setup{
         pylsp = {
             plugins = {
                 black = { enabled = true },
+                flake8 = { maxLineLength = 120 },
+                pycodestyle = { maxLineLength = 120 },
             },
-        }
+        },
     },
 }
 

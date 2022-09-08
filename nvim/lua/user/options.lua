@@ -12,7 +12,6 @@ opt.encoding = 'UTF-8'
 opt.number = true
 opt.relativenumber = true
 
-
 -- Searching
 opt.incsearch = true
 opt.hlsearch = true
@@ -42,6 +41,11 @@ opt.wildmode = 'longest:full,full'
 opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
 
+-- Remove trailing whitespace on save
+vim.cmd([[
+  autocmd BufWritePre * %s/\s\+$//e
+]])
+
 -- Colour scheme
 opt.termguicolors = true
 -- Transparent background
@@ -56,7 +60,7 @@ vim.cmd([[hi clear CursorLine]])
 vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
 
 -- Highlight what was yanked
-vim.cmd([[hi IncSearch guifg=#000000 guibg=#FFFFFF gui=none ctermbg=cyan ctermfg=black cterm=none]])
+vim.cmd([[hi IncSearch guifg=red guibg=#FFFFFF gui=none ctermbg=cyan ctermfg=black cterm=none]])
 vim.cmd([[
   augroup HighlightYank
     autocmd!
@@ -64,8 +68,4 @@ vim.cmd([[
   augroup END
 ]])
 
--- Remove trailing whitespace on save
-vim.cmd([[
-  autocmd BufWritePre * %s/\s\+$//e
-]])
 
