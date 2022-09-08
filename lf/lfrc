@@ -1,3 +1,4 @@
+set ifs "\n"
 set hidden true
 
 set previewer ~/.config/lf/previewer.sh
@@ -38,4 +39,5 @@ map gc cd ~/.config
 map gp cd ~/Projects
 map gs cd ~/Substrakt
 map md mkdir
-map mf mkfile
+map mf mkfiles
+map <enter> lfcd
