@@ -39,5 +39,5 @@ map gc cd ~/.config
 map gp cd ~/Projects
 map gs cd ~/Substrakt
 map md mkdir
-map mf mkfiles
+map mf mkfile
 map <enter> lfcd
