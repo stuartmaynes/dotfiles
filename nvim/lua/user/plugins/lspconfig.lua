@@ -22,6 +22,12 @@ local lsp_flags = {
 
 local lspconfig = require('lspconfig')
 
+lspconfig.rust_analyzer.setup{
+    on_attach = lsp_on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities
+}
+
 -- Go LSP configuration
 lspconfig.gopls.setup{
     on_attach = lsp_on_attach,
