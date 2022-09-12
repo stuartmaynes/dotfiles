@@ -1,9 +1,13 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+command_timeout = 1000
+
 [directory]
 truncation_length = 8
+truncate_to_repo = false
 
 [time]
 disabled = false
 format = "[$time]($style) "
+style = "bold purple"
