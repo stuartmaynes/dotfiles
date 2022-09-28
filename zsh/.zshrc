@@ -79,6 +79,9 @@ eval "$(zoxide init zsh)"
 # Source ASDF to allow versions of Node and Python
 source $(brew --prefix asdf)/libexec/asdf.sh
 
+# Fuzzy search
+[ -f $HOME/.config/zsh/.fzf.zsh ] && source $HOME/.config/zsh/.fzf.zsh
+
 # External scripts to source
 source /usr/local/share/zsh-abbr/zsh-abbr.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -93,11 +96,13 @@ if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
 
-bindkey -s '^o' 'lfcd\n'  # zsh
-alias -g lfcd='lfcd'
+bindkey -s '^o' '_lfcd\n'  # zsh
+alias -g lfcd='_lfcd'
 
 # PATH Variable
-export PATH="$PATH:/usr/local/sbin:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin:/Users/stuart/.local/bin"
+export GOPATH=$(go env GOPATH)
+export GOROOT=$(go env GOROOT)
+export PATH="$PATH:/usr/local/sbin:/usr/local/opt/mysql@5.7/bin:$HOME/.config/composer/vendor/bin:$HOME/.config/bin:/Users/stuart/.local/bin:$GOPATH/bin"
 
 # Search history with the up and down arrows
 autoload -U up-line-or-beginning-search
