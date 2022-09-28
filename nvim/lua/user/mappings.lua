@@ -31,13 +31,16 @@ keymap('n', '<leader>=', '<C-W>=')
 -- Netrw
 keymap('n', '<leader>ft', '<cmd>Sex!<cr>')
 
--- The Dead Zone!
--- nnoremap <Up> <nop>
-keymap('i', '<Up>', '<nop>')
-keymap('i', '<Down>', '<nop>')
-keymap('i', '<Left>', '<nop>')
-keymap('i', '<Right>', '<nop>')
-keymap('n', '<Up>', '<nop>')
-keymap('n', '<Down>', '<nop>')
-keymap('n', '<Left>', '<nop>')
-keymap('n', '<Right>', '<nop>')
+-- Paste
+keymap('v', '<leader>p', '"_dP')
+
+-- the dead zone!
+-- nnoremap <up> <nop>
+keymap('i', '<up>', '<nop>')
+keymap('i', '<down>', '<nop>')
+keymap('i', '<left>', '<nop>')
+keymap('i', '<right>', '<nop>')
+keymap('n', '<up>', '<nop>')
+keymap('n', '<down>', '<nop>')
+keymap('n', '<left>', '<nop>')
+keymap('n', '<right>', '<nop>')
