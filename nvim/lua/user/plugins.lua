@@ -100,41 +100,41 @@ packer.startup(function(use)
         end
     })
 
-    use({
-        'ptzz/lf.vim',
-        requires = {
-            'voldikiss/vim-floaterm'
-        },
-        config = function()
-            require('user.plugins.lf')
-        end,
-    })
+    -- use({
+    --     'ptzz/lf.vim',
+    --     requires = {
+    --         'voldikiss/vim-floaterm'
+    --     },
+    --     config = function()
+    --         require('user.plugins.lf')
+    --     end,
+    -- })
 
-    use({
-        'Shatur/neovim-session-manager',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope-ui-select.nvim',
-        },
-        config = function()
-            require('user.plugins.sessions')
-        end,
-    })
+    -- use({
+    --     'Shatur/neovim-session-manager',
+    --     requires = {
+    --         'nvim-lua/plenary.nvim',
+    --         'nvim-telescope/telescope-ui-select.nvim',
+    --     },
+    --     config = function()
+    --         require('user.plugins.sessions')
+    --     end,
+    -- })
 
-    use({
-        'danymat/neogen',
-        requires = 'nvim-treesitter/nvim-treesitter',
-        config = function()
-            require('user.plugins.neogen')
-        end,
-    })
+    -- use({
+    --     'danymat/neogen',
+    --     requires = 'nvim-treesitter/nvim-treesitter',
+    --     config = function()
+    --         require('user.plugins.neogen')
+    --     end,
+    -- })
 
-    use({
-        'windwp/nvim-autopairs',
-        config = function()
-            require('user.plugins.autopairs')
-        end
-    })
+    -- use({
+    --     'windwp/nvim-autopairs',
+    --     config = function()
+    --         require('user.plugins.autopairs')
+    --     end
+    -- })
 end)
 
 vim.cmd([[

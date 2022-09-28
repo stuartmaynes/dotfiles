@@ -6,6 +6,13 @@ require("tokyonight").setup({
     transparent = true,
     terminal_colors = true,
     sidebars = { "terminal", "packer" },
+    hide_inactive_statusline = true,
+    styles = {
+        floats = "transparent",
+        sidebars = "transparent",
+        laststatus = "transparent",
+        keywords = { italic = false },
+    }
 })
 
 vim.cmd([[colorscheme tokyonight]])

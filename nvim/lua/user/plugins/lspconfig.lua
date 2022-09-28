@@ -29,6 +29,7 @@ lspconfig.rust_analyzer.setup{
 }
 
 -- Go LSP configuration
+-- https://github.com/golang/tools/tree/master/gopls
 lspconfig.gopls.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
@@ -54,6 +55,20 @@ lspconfig.pylsp.setup{
 
 -- JavaScript LSP configuration
 lspconfig.eslint.setup{
+    on_attach = lsp_on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+lspconfig.volar.setup{
+    on_attach = lsp_on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    filetypes = {'vue', 'json'},
+}
+
+-- HTML LSP configuration
+lspconfig.html.setup{
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,

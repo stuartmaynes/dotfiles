@@ -68,4 +68,5 @@ vim.cmd([[
   augroup END
 ]])
 
-
+opt.laststatus = 0
+opt.ruler = false
