@@ -14,7 +14,7 @@
 #     bindkey -s '^o' 'lfcd\n'  # zsh
 #
 
-lfcd () {
+_lfcd() {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
     if [ -f "$tmp" ]; then
