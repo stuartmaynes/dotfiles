@@ -7,6 +7,7 @@ tmux send-keys -t $1:nvim "nvim" Enter
 
 tmux select-window -t $1:server
 tmux split-window -h
+tmux select-pane 0
 
 tmux select-window -t $1:nvim
 tmux -u attach -t $1
