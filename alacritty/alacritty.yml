@@ -21,7 +21,7 @@ window:
   dynamic_padding: false
   decorations: buttonless
 
-  opacity: 0.9
+  opacity: 1
 
   startup_mode: Maximized
 
@@ -100,6 +100,6 @@ key_bindings:
   # Toggle the zoom state of the current tmux pane
   - { key: W, mods: Command, chars: "\x02\x78" }
   # List tmux sessions
-  - { key: L, mods: Command, chars: "\x02\x77" }
+  - { key: L, mods: Command, chars: "\x02\x0c" }
   # Clear the current line and open LF
   - { key: O, mods: Command, chars: "\x15\x6c\x66\x63\x64\x0a" }
