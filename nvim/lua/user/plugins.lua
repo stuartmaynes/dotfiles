@@ -4,25 +4,18 @@ packer.startup(function(use)
     -- Require packer to install packer
     use({'wbthomason/packer.nvim'})
 
-    use({
-        'folke/tokyonight.nvim',
-        config = function()
-            require('user.plugins.tokyonight')
-        end,
-    })
-
 	use({'editorconfig/editorconfig-vim'})
 
 	use({'mattn/emmet-vim'})
 
     use({'jessarcher/vim-heritage'})
 
-    use({'justinmk/vim-sneak'})
-
 	use({'tpope/vim-repeat'})
 	use({'tpope/vim-sensible'})
 	use({'tpope/vim-surround'})
 	use({'tpope/vim-vinegar'})
+
+    use({'morhetz/gruvbox'})
 
 	use({
         'numToStr/Comment.nvim',
@@ -30,16 +23,6 @@ packer.startup(function(use)
             require('user.plugins.comment')
         end,
     })
-
-    -- use({
-    --   'nvim-lualine/lualine.nvim',
-    --   requires = {
-    --       {'kyazdani42/nvim-web-devicons'}
-    --   },
-    --   config = function()
-    --       require('user.plugins.lualine')
-    --   end
-    -- })
 
 	use({
         'nvim-telescope/telescope.nvim',
@@ -92,49 +75,6 @@ packer.startup(function(use)
             require('user.plugins.lspconfig')
         end,
     })
-
-	use({
-        'voldikss/vim-floaterm',
-        config = function()
-            require('user.plugins.floaterm')
-        end
-    })
-
-    -- use({
-    --     'ptzz/lf.vim',
-    --     requires = {
-    --         'voldikiss/vim-floaterm'
-    --     },
-    --     config = function()
-    --         require('user.plugins.lf')
-    --     end,
-    -- })
-
-    -- use({
-    --     'Shatur/neovim-session-manager',
-    --     requires = {
-    --         'nvim-lua/plenary.nvim',
-    --         'nvim-telescope/telescope-ui-select.nvim',
-    --     },
-    --     config = function()
-    --         require('user.plugins.sessions')
-    --     end,
-    -- })
-
-    -- use({
-    --     'danymat/neogen',
-    --     requires = 'nvim-treesitter/nvim-treesitter',
-    --     config = function()
-    --         require('user.plugins.neogen')
-    --     end,
-    -- })
-
-    -- use({
-    --     'windwp/nvim-autopairs',
-    --     config = function()
-    --         require('user.plugins.autopairs')
-    --     end
-    -- })
 end)
 
 vim.cmd([[
