@@ -1,19 +1,19 @@
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
 local lsp_on_attach = function(_, bufnr)
-    local bufopts = { noremap=true, silent=true, buffer=bufnr }
+    local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
-    vim.keymap.set('n', '<Leader>k', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, bufopts)
+    vim.keymap.set('n', '<Leader>ck', vim.lsp.buf.hover, bufopts)
+    vim.keymap.set('n', '<Leader>cr', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', '<Leader>gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', '<Leader>gt', vim.lsp.buf.type_definition, bufopts)
-    vim.keymap.set('n', '<Leader>gi', vim.lsp.buf.implementation, bufopts)
-    vim.keymap.set('n', '<Leader>dn', vim.diagnostic.goto_next, bufopts)
-    vim.keymap.set('n', '<Leader>dp', vim.diagnostic.goto_prev, bufopts)
-    vim.keymap.set('n', '<Leader>fd', vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set('n', '<Leader>cd', vim.lsp.buf.definition, bufopts)
+    vim.keymap.set('n', '<Leader>ct', vim.lsp.buf.type_definition, bufopts)
+    vim.keymap.set('n', '<Leader>ci', vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set('n', '<Leader>cf', vim.lsp.buf.format, bufopts)
+    vim.keymap.set('n', '<Leader>cn', vim.diagnostic.goto_next, bufopts)
+    vim.keymap.set('n', '<Leader>cp', vim.diagnostic.goto_prev, bufopts)
 end
 
 local lsp_flags = {
@@ -22,7 +22,7 @@ local lsp_flags = {
 
 local lspconfig = require('lspconfig')
 
-lspconfig.rust_analyzer.setup{
+lspconfig.rust_analyzer.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities
@@ -30,7 +30,7 @@ lspconfig.rust_analyzer.setup{
 
 -- Go LSP configuration
 -- https://github.com/golang/tools/tree/master/gopls
-lspconfig.gopls.setup{
+lspconfig.gopls.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities
@@ -38,7 +38,7 @@ lspconfig.gopls.setup{
 
 -- Python LSP configuration
 --- https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md
-lspconfig.pylsp.setup{
+lspconfig.pylsp.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -54,34 +54,28 @@ lspconfig.pylsp.setup{
 }
 
 -- JavaScript LSP configuration
-lspconfig.eslint.setup{
+lspconfig.eslint.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
 
-lspconfig.volar.setup{
-    on_attach = lsp_on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
-    filetypes = {'vue', 'json'},
-}
 
 -- HTML LSP configuration
-lspconfig.html.setup{
+lspconfig.html.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
 
 -- PHP LSP configuration
-lspconfig.intelephense.setup{
+lspconfig.intelephense.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
 }
 
-lspconfig.sumneko_lua.setup{
+lspconfig.sumneko_lua.setup {
     on_attach = lsp_on_attach,
     flags = lsp_flags,
     capabilities = capabilities,

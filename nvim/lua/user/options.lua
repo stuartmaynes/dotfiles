@@ -47,6 +47,7 @@ vim.cmd([[
 ]])
 
 -- Colour scheme
+vim.cmd([[colorscheme gruvbox]])
 opt.termguicolors = true
 -- Transparent background
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
@@ -68,5 +69,6 @@ vim.cmd([[
   augroup END
 ]])
 
-opt.laststatus = 0
-opt.ruler = false
+vim.o.ls = 0
+vim.o.laststatus = 0
+
