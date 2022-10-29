@@ -48,7 +48,7 @@ vim.cmd([[
 
 -- Colour scheme
 vim.cmd([[colorscheme gruvbox]])
-opt.termguicolors = true
+-- opt.termguicolors = true
 -- Transparent background
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 -- Visual highlight
