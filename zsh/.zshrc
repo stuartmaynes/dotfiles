@@ -83,8 +83,8 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 [ -f $HOME/.config/zsh/.fzf.zsh ] && source $HOME/.config/zsh/.fzf.zsh
 
 # External scripts to source
-source /usr/local/share/zsh-abbr/zsh-abbr.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
 source $HOME/.config/zsh/gitignore.zsh
 
 # This is a little buggy
