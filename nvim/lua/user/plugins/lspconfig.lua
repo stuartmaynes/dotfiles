@@ -80,3 +80,9 @@ lspconfig.sumneko_lua.setup {
     flags = lsp_flags,
     capabilities = capabilities,
 }
+
+lspconfig.julials.setup{
+    on_attach = lsp_on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}

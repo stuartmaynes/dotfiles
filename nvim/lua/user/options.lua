@@ -58,7 +58,7 @@ vim.cmd([[hi Visual guifg=#000000 guibg=#9978DB gui=none]])
 opt.cursorline = true
 -- Colour of the cursor line
 vim.cmd([[hi clear CursorLine]])
-vim.cmd([[hi CursorLine gui=underline cterm=underline ctermfg=Yellow guifg=None]])
+vim.cmd([[hi CursorLine gui=underline cterm=underline guifg=None]])
 
 -- Highlight what was yanked
 vim.cmd([[hi IncSearch guifg=red guibg=#FFFFFF gui=none ctermbg=cyan ctermfg=black cterm=none]])
