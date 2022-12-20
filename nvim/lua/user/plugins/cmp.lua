@@ -27,7 +27,7 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "path" },
         { name = "luasnip" },
-        { name = "buffer", keyword_length = 5 },
+        { name = "buffer", keyword_length = 4 },
     },
     snippet = {
         expand = function(args)

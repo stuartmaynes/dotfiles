@@ -24,6 +24,8 @@ packer.startup(function(use)
         end,
     })
 
+    use({ 'nvim-tree/nvim-web-devicons' })
+
 	use({
         'nvim-telescope/telescope.nvim',
         requires = {
@@ -31,7 +33,6 @@ packer.startup(function(use)
             { 'ThePrimeagen/harpoon' },
             { 'ThePrimeagen/git-worktree.nvim' },
             { 'nvim-lua/plenary.nvim' },
-            { 'kyazdani42/nvim-web-devicons' },
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
             { 'nvim-telescope/telescope-live-grep-args.nvim' },
         },
@@ -62,11 +63,20 @@ packer.startup(function(use)
             'hrsh7th/cmp-path',
             'onsails/lspkind-nvim',
             'saadparwaiz1/cmp_luasnip',
+            'kdheepak/cmp-latex-symbols',
         },
         config = function()
             require('user.plugins.cmp')
             require('user.plugins.luasnip')
         end,
+        sources = {
+            {
+                name = 'latex_symbols',
+                option = {
+                    strategy = 0, -- mixed
+                },
+            },
+        },
     })
 
     use({

@@ -44,7 +44,6 @@ keymap('n', '<leader>fd', [[<cmd>lua require('telescope.builtin').diagnostics()<
 keymap('n', '<leader>fa', [[<cmd>lua require('telescope.builtin').find_files({hidden=true})<cr>]])
 keymap('n', '<leader>ff', [[<cmd>lua require('telescope.builtin').find_files()<cr>]])
 keymap('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]])
--- keymap('n', '<leader>fw', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]])
 keymap('n', '<leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]])
 keymap('n', '<leader>fi', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending"})<cr>]])
 keymap('n', '<leader>fm', [[<cmd>lua require('telescope.builtin').man_pages()<cr>]])
